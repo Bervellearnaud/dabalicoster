@@ -1,0 +1,30 @@
+# Dépendances / builds
+node_modules/
+dist/
+build/
+out/
+coverage/
+*.log
+
+# Environnement & secrets (ne jamais committer)
+.env
+.env.*
+*.pem
+*.key
+
+# Éditeurs / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Caches Python / outils
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Fichiers de travail locaux (hors projet)
+uploads/
+cahier_texte.txt

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application — DABALICOSTER</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="shell">
+    <!-- ======== SIDEBAR ======== -->
+    <aside class="sidebar">
+      <a class="brand" href="app.html">
+        <span class="brand-logo"><img src="assets/logo.svg" alt=""></span>
+        <span class="brand-name">DABALI<em>COSTER</em></span>
+      </a>
+      <span class="side-title">Application</span>
+      <a class="side-link" data-route="/dashboard" href="#/dashboard"><span class="ico">📊</span><span class="lbl">Tableau de bord</span></a>
+      <a class="side-link" data-route="/ingredients" href="#/ingredients"><span class="ico">🧺</span><span class="lbl">Ingrédients</span></a>
+      <a class="side-link" data-route="/recettes" href="#/recettes"><span class="ico">📋</span><span class="lbl">Recettes</span></a>
+      <a class="side-link" data-route="/menus" href="#/menus"><span class="ico">🍽️</span><span class="lbl">Menus</span></a>
+      <a class="side-link" data-route="/parametres" href="#/parametres"><span class="ico">⚙️</span><span class="lbl">Paramètres</span></a>
+      <div class="side-sep"></div>
+      <span class="side-title">Compte</span>
+      <a class="side-link" href="admin.html" id="link-admin" hidden><span class="ico">🛡️</span><span class="lbl">Administration</span></a>
+      <a class="side-link" href="espace.html"><span class="ico">👤</span><span class="lbl">Espace personnel</span></a>
+      <div class="sidebar-foot">
+        <div class="side-user" id="side-user"></div>
+        <button type="button" class="btn-logout" id="btn-logout">Se déconnecter</button>
+      </div>
+    </aside>
+
+    <!-- ======== MAIN ======== -->
+    <div class="main">
+      <header class="topbar">
+        <button type="button" class="btn-back" data-back="app.html" title="Retour (historique réel)">← Retour</button>
+        <div id="breadcrumb-slot"></div>
+        <div class="topbar-right">
+          <span class="devise-chip" id="devise-chip">XOF</span>
+        </div>
+      </header>
+
+      <!-- Skeleton d'ouverture d'espace -->
+      <div class="skeleton-host" id="skeleton">
+        <div class="sk-kpis">
+          <div class="sk sk-kpi"></div><div class="sk sk-kpi"></div><div class="sk sk-kpi"></div><div class="sk sk-kpi"></div>
+        </div>
+        <div class="sk sk-panel"></div>
+      </div>
+
+      <main class="content" id="view" hidden></main>
+    </div>
+  </div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/store.db.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    /* V2 : hydrate le cache depuis Supabase, puis charge l'espace */
+    StoreDB.boot().then(function () {
+      var s = document.createElement('script');
+      s.src = 'js/app.js';
+      document.body.appendChild(s);
+    });
+  </script>
+</body>
+</html>
