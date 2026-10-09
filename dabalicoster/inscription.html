@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription — DABALICOSTER</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body class="inscription-body">
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-halo h1" aria-hidden="true"></div>
+  <div class="bg-halo h2" aria-hidden="true"></div>
+
+  <a class="auth-top-link" href="index.html">← Retour au site</a>
+
+  <div class="glass auth-card">
+    <a class="brand" href="index.html" style="margin-bottom:22px;">
+      <span class="brand-logo"><img src="assets/logo.svg" alt=""></span>
+      <span class="brand-name">DABALI<em>COSTER</em><span class="brand-sub">VOOMNET Formation</span></span>
+    </a>
+    <h1>Créer votre compte</h1>
+    <p class="sub">Rejoignez les établissements qui pilotent leur Food Cost avec précision.</p>
+
+    <div class="form-error" id="form-error" role="alert"></div>
+    <div class="form-success" id="form-success" role="status"></div>
+
+    <form id="register-form" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="prenom">Prénom *</label>
+          <input type="text" id="prenom" name="prenom" placeholder="Ex. Aya" required>
+        </div>
+        <div class="field">
+          <label for="nom">Nom *</label>
+          <input type="text" id="nom" name="nom" placeholder="Ex. Kouamé" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Adresse e-mail *</label>
+        <input type="email" id="email" name="email" placeholder="vous@etablissement.ci" autocomplete="username" required>
+      </div>
+
+      <div class="field">
+        <label for="contact">Contact téléphonique (optionnel)</label>
+        <input type="tel" id="contact" name="contact" placeholder="+225 07 00 00 00 00">
+      </div>
+
+      <div class="field">
+        <label for="role">Profil *</label>
+        <select id="role" name="role" required>
+          <option value="utilisateur">Utilisateur</option>
+          <option value="chef">Chef de restaurant</option>
+        </select>
+        <p class="field-hint" style="color:var(--texte-secondaire);">Le profil Administrateur est attribué uniquement par un administrateur existant.</p>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="password">Mot de passe *</label>
+          <div class="with-eye">
+            <input type="password" id="password" name="password" placeholder="6 caractères min. dont 1 chiffre" autocomplete="new-password" required>
+            <button type="button" class="eye-btn" data-toggle="password" aria-label="Afficher">👁</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="confirmation">Confirmation *</label>
+          <div class="with-eye">
+            <input type="password" id="confirmation" name="confirmation" placeholder="Répétez le mot de passe" autocomplete="new-password" required>
+            <button type="button" class="eye-btn" data-toggle="confirmation" aria-label="Afficher">👁</button>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-gold" id="btn-register" style="width:100%;">Créer mon compte</button>
+    </form>
+
+    <p class="auth-foot">Déjà inscrit ? <a href="login.html">Se connecter</a></p>
+  </div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/inscription.js"></script>
+</body>
+</html>

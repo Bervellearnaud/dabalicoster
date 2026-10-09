@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DABALICOSTER — Food Cost & coût matière · VOOMNET FORMATION</title>
+  <meta name="description" content="Plateforme SaaS de gestion des recettes, du coût matière et du Food Cost pour les hôtels, restaurants et traiteurs. Spécialisée cuisine ivoirienne. Devise FCFA.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <!-- ======== INTRO ANIMÉE ======== -->
+  <div id="intro" aria-hidden="true">
+    <div class="intro-grid"></div>
+    <canvas id="embers"></canvas>
+    <button id="intro-skip" type="button">Passer l'intro</button>
+    <div class="intro-center">
+      <div class="intro-logo"><img src="assets/logo.svg" alt="Logo DABALICOSTER"></div>
+      <div class="intro-title">DABALI<em>COSTER</em></div>
+      <div class="intro-tag">Cuisine · Formation · Gestion</div>
+      <div class="intro-slogan">« Votre savoir-faire mérite une gestion à sa hauteur. »</div>
+    </div>
+  </div>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-halo h1" aria-hidden="true"></div>
+  <div class="bg-halo h2" aria-hidden="true"></div>
+
+  <!-- ======== NAVIGATION ======== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo"><img src="assets/logo.svg" alt=""></span>
+        <span class="brand-name">DABALI<em>COSTER</em><span class="brand-sub">VOOMNET Formation</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#moteur">Moteur temps réel</a>
+        <a href="#methode">Méthode</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-outline" href="login.html">Se connecter</a>
+        <a class="btn btn-gold" href="inscription.html">S'inscrire</a>
+      </div>
+      <button class="nav-burger" id="nav-burger" type="button" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="badge-pill">SaaS · Food Cost &amp; coût matière</span>
+        <h1>Votre savoir-faire mérite <em>une gestion à sa hauteur.</em></h1>
+        <p class="hero-lead">DABALICOSTER transforme vos recettes en coûts, puis utilise ces coûts pour tarifer vos menus de façon intelligente et automatisée. Conçu pour les hôtels, restaurants et traiteurs — spécialisé cuisine ivoirienne, en FCFA.</p>
+        <ul class="hero-promises">
+          <li>Chaque modification de prix recalcule instantanément vos recettes et vos menus.</li>
+          <li>Simulez votre prix de vente et votre objectif Food Cost en temps réel.</li>
+          <li>Carte nutritionnelle dynamique générée automatiquement pour chaque fiche.</li>
+        </ul>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="inscription.html">Créer mon compte gratuit</a>
+          <a class="btn btn-violet" href="login.html">Voir la démonstration</a>
+        </div>
+      </div>
+      <div class="glass hero-preview reveal">
+        <div class="preview-head">
+          <strong>Tableau de bord — Aperçu</strong>
+          <span>Mis à jour à l'instant</span>
+        </div>
+        <div class="preview-kpis">
+          <div class="pv-kpi"><small>Coût / portion</small><strong>1 543 F</strong></div>
+          <div class="pv-kpi"><small>Food Cost</small><strong>43,0 %</strong></div>
+          <div class="pv-kpi"><small>Recettes</small><strong>4</strong></div>
+          <div class="pv-kpi"><small>Alertes</small><strong>5</strong></div>
+        </div>
+        <div class="pv-bars">
+          <div class="pv-bar"><span>Poulet braisé</span><div class="pv-track"><div class="pv-fill" style="width:59%"></div></div><b>41,6 %</b></div>
+          <div class="pv-bar"><span>Sauce graine</span><div class="pv-track"><div class="pv-fill" style="width:58%"></div></div><b>40,9 %</b></div>
+          <div class="pv-bar"><span>Garba thon</span><div class="pv-track"><div class="pv-fill" style="width:69%"></div></div><b>48,5 %</b></div>
+          <div class="pv-bar"><span>Alloco</span><div class="pv-track"><div class="pv-fill" style="width:58%"></div></div><b>41,1 %</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== BANDEAU CLIENTS ======== -->
+  <div class="marquee-wrap" aria-label="Ils nous font confiance">
+    <div class="marquee" id="marquee">
+      <span>Hôtel Ivoire Palace</span><span>Chez Simonne</span><span>Le Wafou</span>
+      <span>Maquis Le Garba d'Or</span><span>Les Saveurs d'Abidjan</span><span>Hôtel Tiama</span>
+      <span>Le Patio by Dabali</span><span>Chez Georges</span><span>Assinie Beach Food</span>
+      <span>La Terrasse du Plateau</span>
+    </div>
+  </div>
+
+  <!-- ======== FONCTIONNALITÉS ======== -->
+  <section class="section" id="fonctionnalites">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Fonctionnalités</span>
+        <h2>Tout le pilotage de votre coût matière</h2>
+        <p>Quatre modules essentiels, un seul moteur de calcul déterministe, des données toujours à jour.</p>
+      </div>
+      <div class="features">
+        <div class="glass feature reveal">
+          <div class="feature-icon">🧺</div>
+          <h3>Référentiel ingrédients</h3>
+          <p>Prix FCFA, unités, fournisseurs, historique et tendances 30 jours avec alertes de hausse.</p>
+        </div>
+        <div class="glass feature reveal">
+          <div class="feature-icon">📋</div>
+          <h3>Fiches techniques &amp; costing</h3>
+          <p>Sélectionnez vos ingrédients, le coût total et le coût portion se calculent automatiquement.</p>
+        </div>
+        <div class="glass feature reveal">
+          <div class="feature-icon">🎚️</div>
+          <h3>Simulation temps réel</h3>
+          <p>Sliders prix de vente et objectif Food Cost : jauge colorée, prix conseillé et marge, sans sauvegarde.</p>
+        </div>
+        <div class="glass feature reveal">
+          <div class="feature-icon">🍽️</div>
+          <h3>Menu Builder &amp; nutrition</h3>
+          <p>Assemblez vos recettes, obtenez le coût du repas, le prix conseillé et la carte nutritionnelle dynamique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== MOTEUR TEMPS RÉEL ======== -->
+  <section class="section section-dark" id="moteur">
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="container engine-grid">
+      <div class="engine-copy reveal">
+        <span class="kicker" style="color:var(--or); text-transform:uppercase; letter-spacing:0.22em; font-size:12.5px; font-weight:600;">Moteur temps réel</span>
+        <h2>Un prix change. Toute votre carte se recalcule.</h2>
+        <p>Le moteur de costing est déterministe et centralisé : conversions d'unités par famille (kg/g, L/ml, pièce, sachet), six formules métier, aucune approximation.</p>
+        <ul class="engine-list">
+          <li>Coût ingrédient = quantité utilisée × coût unitaire</li>
+          <li>Coût portion = coût recette ÷ nombre de portions</li>
+          <li>Food Cost (%) = coût portion ÷ prix de vente HT × 100</li>
+          <li>Prix théorique = coût portion ÷ objectif Food Cost</li>
+        </ul>
+      </div>
+      <div class="glass propagation reveal">
+        <div class="prop-step"><span class="dot"></span><div><strong>Tomate fraîche : 900 F → 1 000 F / kg</strong><small>Modification au référentiel ingrédients</small></div></div>
+        <div class="prop-step"><span class="dot"></span><div><strong>4 recettes recalculées</strong><small>Poulet braisé, Sauce graine, Garba, Alloco</small></div></div>
+        <div class="prop-step"><span class="dot"></span><div><strong>Food Cost &amp; prix conseillés mis à jour</strong><small>Tableau de bord, fiches, menus</small></div></div>
+        <div class="prop-step"><span class="dot"></span><div><strong>Alerte hausse +11,1 % notifiée</strong><small>Seuil d'alerte : +5 % sur 30 jours</small></div></div>
+        <div class="prop-loop">⟲ propagation instantanée à chaque modification</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== MÉTHODE ======== -->
+  <section class="section" id="methode">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Méthode</span>
+        <h2>Trois étapes pour tarifer sereinement</h2>
+      </div>
+      <div class="steps">
+        <div class="glass step reveal">
+          <div class="step-num">1</div>
+          <h3>Renseignez vos ingrédients</h3>
+          <p>Nom, catégorie, unité, prix FCFA et fournisseur. L'historique et les tendances se construisent automatiquement.</p>
+        </div>
+        <div class="glass step reveal">
+          <div class="step-num">2</div>
+          <h3>Créez vos fiches techniques</h3>
+          <p>Ajoutez vos ingrédients avec quantités et unités compatibles : coût recette et coût portion calculés en direct.</p>
+        </div>
+        <div class="glass step reveal">
+          <div class="step-num">3</div>
+          <h3>Tarifez en confiance</h3>
+          <p>Simulez prix de vente et objectif Food Cost, appliquez le prix conseillé, assemblez vos menus au coût maîtrisé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TÉMOIGNAGES ======== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Témoignages</span>
+        <h2>Ils pilotent déjà leur Food Cost</h2>
+      </div>
+      <div class="quotes">
+        <div class="glass quote reveal">
+          <div class="quote-stars">★★★★★</div>
+          <p>« Depuis que le marché a flambé, je voyais ma marge fondre sans savoir où. Avec DABALICOSTER, chaque hausse de prix recalcule ma carte : je re-tarife le jour même. »</p>
+          <div class="quote-who">
+            <div class="quote-avatar">SK</div>
+            <div><strong>Chef Sylvie Konan</strong><span>Restaurant Le Wafou, Cocody</span></div>
+          </div>
+        </div>
+        <div class="glass quote reveal">
+          <div class="quote-stars">★★★★★</div>
+          <p>« La simulation temps réel a changé nos réunions de direction : on débat enfin avec des chiffres, pas des intuitions. Le Menu Builder nous a fait gagner 2 points de marge. »</p>
+          <div class="quote-who">
+            <div class="quote-avatar">AD</div>
+            <div><strong>Alain Diomandé</strong><span>Directeur F&amp;B, Hôtel Ivoire Palace</span></div>
+          </div>
+        </div>
+        <div class="glass quote reveal">
+          <div class="quote-stars">★★★★★</div>
+          <p>« Pour un traiteur, le coût portion exact est vital. Les fiches techniques et la carte nutritionnelle automatique nous font gagner un temps précieux sur chaque devis. »</p>
+          <div class="quote-who">
+            <div class="quote-avatar">MB</div>
+            <div><strong>Mariam Bamba</strong><span>Traiteur Les Saveurs d'Abidjan</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TARIFS ======== -->
+  <section class="section" id="tarifs">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Tarifs</span>
+        <h2>Un prix par mois, en FCFA, sans surprise</h2>
+        <p>Commencez gratuitement, évoluez quand votre établissement grandit.</p>
+      </div>
+      <div class="plans">
+        <div class="glass plan reveal">
+          <h3>Découverte</h3>
+          <div class="plan-price">0 F <small>/ mois</small></div>
+          <ul>
+            <li>Jusqu'à 10 recettes</li>
+            <li>Jusqu'à 20 ingrédients</li>
+            <li>Costing automatique</li>
+            <li>Tableau de bord</li>
+            <li class="off">Simulation temps réel</li>
+            <li class="off">Menu Builder</li>
+          </ul>
+          <a class="btn btn-outline" href="inscription.html">Commencer gratuitement</a>
+        </div>
+        <div class="glass plan featured reveal">
+          <h3>Professionnel</h3>
+          <div class="plan-price">25 000 F <small>/ mois</small></div>
+          <ul>
+            <li>Recettes &amp; ingrédients illimités</li>
+            <li>Simulation temps réel</li>
+            <li>Carte nutritionnelle dynamique</li>
+            <li>Menu Builder &amp; prix conseillés</li>
+            <li>Alertes de hausse &gt; 5 %</li>
+            <li class="off">Multi-utilisateurs</li>
+          </ul>
+          <a class="btn btn-gold" href="inscription.html">Choisir Professionnel</a>
+        </div>
+        <div class="glass plan reveal">
+          <h3>Établissement</h3>
+          <div class="plan-price">60 000 F <small>/ mois</small></div>
+          <ul>
+            <li>Tout le plan Professionnel</li>
+            <li>Comptes Chef &amp; Utilisateurs multiples</li>
+            <li>Administration des comptes</li>
+            <li>Historique complet &amp; tendances</li>
+            <li>Accompagnement VOOMNET Formation</li>
+            <li>Support prioritaire</li>
+          </ul>
+          <a class="btn btn-outline" href="inscription.html">Choisir Établissement</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FAQ ======== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">FAQ</span>
+        <h2>Questions fréquentes</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="glass faq-item">
+          <button class="faq-q" type="button">Qu'est-ce que le Food Cost ?<span class="chev">▼</span></button>
+          <div class="faq-a"><p>Le Food Cost est le ratio entre le coût matière d'une portion et son prix de vente HT, exprimé en pourcentage. Un Food Cost de 35 % signifie que 35 % du prix de vente sert à payer les ingrédients. DABALICOSTER le calcule automatiquement pour chaque recette et chaque menu, et vous alerte quand il dépasse votre objectif.</p></div>
+        </div>
+        <div class="glass faq-item">
+          <button class="faq-q" type="button">Faut-il installer quelque chose ?<span class="chev">▼</span></button>
+          <div class="faq-a"><p>Non. DABALICOSTER est une plateforme SaaS accessible depuis n'importe quel navigateur, sur ordinateur comme sur mobile. Vos données sont conservées de façon sécurisée et restent disponibles après actualisation et reconnexion.</p></div>
+        </div>
+        <div class="glass faq-item">
+          <button class="faq-q" type="button">Quelles devises sont prises en charge ?<span class="chev">▼</span></button>
+          <div class="faq-a"><p>Le FCFA (XOF) est la devise par défaut, pensée pour la cuisine ivoirienne. Vous pouvez aussi afficher vos valeurs en EUR, USD ou GBP dans les paramètres — la devise choisie est utilisée partout dans l'application et persistée.</p></div>
+        </div>
+        <div class="glass faq-item">
+          <button class="faq-q" type="button">Mes prix changent souvent au marché. Comment la plateforme suit-elle ?<span class="chev">▼</span></button>
+          <div class="faq-a"><p>Chaque ingrédient dispose d'un historique de prix sur 30 jours avec tendances et sparklines. Dès qu'un prix est modifié, toutes les recettes et menus qui l'utilisent sont recalculés instantanément, et une alerte est déclenchée si la hausse dépasse 5 % sur la période.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA FINAL ======== -->
+  <section class="cta-final">
+    <div class="container reveal">
+      <div class="cta-logo"><img src="assets/logo.svg" alt="Logo DABALICOSTER"></div>
+      <h2>Prêt à maîtriser votre coût matière ?</h2>
+      <p>Rejoignez les établissements qui tarifient avec précision, du garba de rue au menu gastronomique.</p>
+      <div class="hero-ctas" style="justify-content:center;">
+        <a class="btn btn-gold" href="inscription.html">Créer mon compte</a>
+        <a class="btn btn-violet" href="login.html">Se connecter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="margin-bottom:14px;">
+            <span class="brand-logo"><img src="assets/logo.svg" alt=""></span>
+            <span class="brand-name">DABALI<em>COSTER</em><span class="brand-sub">VOOMNET Formation</span></span>
+          </a>
+          <p>Plateforme SaaS de gestion des recettes, du coût matière et du Food Cost. Spécialisée cuisine ivoirienne — hôtels, restaurants, traiteurs. Devise FCFA (XOF).</p>
+        </div>
+        <div>
+          <h4>Plateforme</h4>
+          <ul>
+            <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+            <li><a href="#moteur">Moteur temps réel</a></li>
+            <li><a href="#methode">Méthode</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Comptes</h4>
+          <ul>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="login.html">Connexion</a></li>
+            <li><a href="espace.html">Espace personnel</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@dabalicoster.ci">contact@dabalicoster.ci</a></li>
+            <li><a href="tel:+2252722445566">+225 27 22 44 55 66</a></li>
+            <li>Abidjan, Côte d'Ivoire</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <em>DABALICOSTER</em> — VOOMNET FORMATION · Cuisine · Formation · Gestion</span>
+        <span><em>« Votre savoir-faire mérite une gestion à sa hauteur. »</em></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+</html>

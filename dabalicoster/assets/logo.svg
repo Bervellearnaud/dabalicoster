@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="dcGold" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F3E3B3"/>
+      <stop offset="0.45" stop-color="#E4C477"/>
+      <stop offset="1" stop-color="#C08F32"/>
+    </linearGradient>
+  </defs>
+  <!-- Toque de chef stylisée -->
+  <g fill="url(#dcGold)">
+    <circle cx="22.5" cy="24" r="8.5"/>
+    <circle cx="32" cy="19.5" r="10"/>
+    <circle cx="41.5" cy="24" r="8.5"/>
+    <path d="M17.5 28h29v5.5c0 5.8-4.2 9.5-14.5 9.5S17.5 39.3 17.5 33.5V28Z"/>
+    <rect x="19.5" y="45.5" width="25" height="6.5" rx="3.25"/>
+  </g>
+  <!-- Pièce (costing) -->
+  <circle cx="49" cy="49" r="10" fill="#1B0F33" stroke="url(#dcGold)" stroke-width="2.5"/>
+  <text x="49" y="53.8" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#E4C477">F</text>
+</svg>
